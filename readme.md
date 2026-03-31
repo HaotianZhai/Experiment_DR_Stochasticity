@@ -31,6 +31,27 @@
 
 ## Table 2. Temperature Ablation results on 10 instances with backbone model Qwen3-4B-Instruct-2507/reflection module
 
+| $\lambda$ | Step | Module | Ans. TV | Find. TV | Cit. TV | Acc. |
+|---|---|---|---|---|---|---|
+| 0.5 | 1 | Query | 0.44 | 0.86 | 0.62 | 0.14 |
+| 0.5 | 1 | Sum | 0.52 | 0.91 | 0.68 | 0.10 |
+| 0.5 | 1 | Update | 0.58 | 0.96 | 0.76 | 0.08 |
+| 0.5 | 2 | Query | 0.30 | 0.83 | 0.51 | 0.18 |
+| 0.5 | 2 | Sum | 0.37 | 0.75 | 0.57 | 0.13 |
+| 0.5 | 2 | Update | 0.43 | 0.86 | 0.65| 0.09 |
+| 0.5 | Combined | Query | 0.54| 0.94| 0.78 | 0.12 |
+| 0.5 | Combined | Sum | 0.62| 0.94 | 0.84 | 0.08 |
+| 0.5 | Combined | Update | 0.62 | 0.95 | 0.82 | 0.14 |
+| 1.0 | 1 | Query | 0.50 | 0.92 | 0.69 | 0.11 |
+| 1.0 | 1 | Sum | 0.60 | 0.92 | 0.76 | 0.07 |
+| 1.0 | 1 | Update | 0.67 | 0.96 | 0.84 | 0.04 |
+| 1.0 | 2 | Query | 0.36 | 0.89 | 0.58 | 0.14 |
+| 1.0 | 2 | Sum | 0.44 | 0.78 | 0.61 | 0.08 |
+| 1.0 | 2 | Update | 0.41 | 0.80 | 0.63 |0.13 |
+| 1.0 | Combined | Query |0.63 | 0.91 | 0.86 | 0.06 |
+| 1.0 | Combined | Sum | 0.71 | 0.92 | 0.82 | 0.12 |
+| 1.0 | Combined | Update | 0.73 | 0.97 | 0.87 | 0.10 |
+
 ## Table 3. Mitigation results on 30 instances with 95\% bootstrap confidence interval
 
 | Method | Acc. | $\widehat{\mathrm{TV}}(\mathbf{Y})$ | $\widehat{\mathrm{TV}}(\mathbf{B})$ | $\widehat{\mathrm{TV}}(\mathbf{C})$ |
