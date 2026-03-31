@@ -28,3 +28,5 @@
 | 1.0 | Combined | Query | 0.51 [0.47, 0.56] | 0.85 [0.83, 0.87] | 0.49 [0.45, 0.55] | 0.52 [0.44, 0.59] |
 | 1.0 | Combined | Sum | 0.58 [0.52, 0.62] | 0.94 [0.87, 0.96] | 0.60 [0.58, 0.62] | 0.44 [0.40, 0.49] |
 | 1.0 | Combined | Update | 0.61 [0.56, 0.68] | 0.87 [0.85, 0.88] | 0.60 [0.58, 0.66] | 0.54 [0.52, 0.56] |
+
+## Table 2. Temperature Ablation results on 10 instances with backbone model Qwen3-4B-Instruct-2507/reflection module
