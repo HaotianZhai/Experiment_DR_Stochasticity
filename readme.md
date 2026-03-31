@@ -1,6 +1,6 @@
 # Additional Results 
 
-## Table 1. Ablation results on 30 instances with 95\% bootstrap confidence intervals
+## Table 1. Temperature Ablation results on 30 instances with 95\% bootstrap confidence intervals
 
 | $\lambda$ | Step | Module | Ans. TV | Find. TV | Cit. TV | Acc. |
 |---:|---:|---|---:|---:|---:|---:|
