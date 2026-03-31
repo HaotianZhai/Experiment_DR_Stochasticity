@@ -3,7 +3,7 @@
 ## Table 1. Temperature Ablation results on 30 instances with 95\% bootstrap confidence intervals
 
 | $\lambda$ | Step | Module | Ans. TV | Find. TV | Cit. TV | Acc. |
-|---:|---:|---|---:|---:|---:|---:|
+|---|---|---|---|---|---|---|
 | 0.5 | 1 | Query | 0.35 [0.28, 0.42] | 0.78 [0.73, 0.83] | 0.40 [0.34, 0.44] | 0.42 [0.39, 0.47] |
 | 0.5 | 1 | Sum | 0.58 [0.52, 0.59] | 0.81 [0.77, 0.87] | 0.55 [0.47, 0.63] | 0.40 [0.35, 0.43] |
 | 0.5 | 1 | Update | 0.60 [0.58, 0.64] | 0.84 [0.81, 0.85] | 0.52 [0.44, 0.60] | 0.52 [0.42, 0.58] |
@@ -30,3 +30,62 @@
 | 1.0 | Combined | Update | 0.61 [0.56, 0.68] | 0.87 [0.85, 0.88] | 0.60 [0.58, 0.66] | 0.54 [0.52, 0.56] |
 
 ## Table 2. Temperature Ablation results on 10 instances with backbone model Qwen3-4B-Instruct-2507/reflection module
+
+## Table 3. Mitigation results on 30 instances with 95\% bootstrap confidence interval
+
+| Method | Acc. | $\widehat{\mathrm{TV}}(\mathbf{Y})$ | $\widehat{\mathrm{TV}}(\mathbf{B})$ | $\widehat{\mathrm{TV}}(\mathbf{C})$ |
+|---|---|---|---|---|
+| Baseline | 0.23 [0.21, 0.24] | 0.63 [0.59, 0.64] | 0.84 [0.80, 0.86] | 0.62 [0.59, 0.66] |
+| Struc. Sum. | 0.29 [0.25, 0.31] | 0.58 [0.52, 0.62] | 0.81 [0.77, 0.86] | 0.65 [0.60, 0.71] |
+| Struc. Update | 0.33 [0.31, 0.36] | 0.52 [0.48, 0.55] | 0.74 [0.70, 0.79] | 0.57 [0.52, 0.62] |
+| Struc. Comb. | 0.33 [0.32, 0.36] | 0.45 [0.40, 0.47] | 0.68 [0.63, 0.69] | 0.55 [0.52, 0.60] |
+| Quer. Int. | 0.31 [0.27, 0.35] | 0.49 [0.44, 0.52] | 0.74 [0.70, 0.77] | 0.60 [0.54, 0.65] |
+| **Comb.** | **0.35 [0.32, 0.36]** | **0.39 [0.34, 0.42]** | **0.61 [0.58, 0.61]** | **0.44 [0.39, 0.47]** |
+
+## Table 4. Expert Audit: LLM-as-a-judge for finding extraction
+
+| Audit setup | Value |
+|---|---|
+| # total extracted findings audited | 571 |
+| # total manually identified gold findings | 578 |
+
+| Final Consensus  label | Count | Percentage |
+|---|---|---|
+| Correct | 544 | 95.3% |
+| Insufficient | 27 | 4.7% |
+| Hallucinated | 0 | 0.0% |
+| Missing | 7 | 1.2% |
+
+## Table 5. Expert Audit: LLM-as-a-judge for finding clustering
+
+| Metric | Value |
+|---|---|
+| # sampled clusters | 30 |
+| Pure clusters | 28 |
+| Mixed clusters | 2 |
+| Cluster purity | 93.3% |
+
+## Table 6. Overhead of our mitigation methods
+
+| Method | Avg. total tokens | Avg. # search calls | Token overhead | Search overhead | 
+|---|---|---|---|---|
+| Baseline |96,745 | 8.9 | N/A  | N/A | 
+| Struc. Sum. | 97,828 | 9.1 | 1,083 | 0.2 | 
+| Struc. Update | 96,171 |8.7| -574 | -0.2 | 
+| Struc. Comb. |97,091 | 8.9 | 346 |0.0| 
+| Quer. Int. |100,036| 9.5 |3,291 | 0.6 | 
+| Comb. |99,961 |9.4 | 3,216  | 0.5 | 
+
+## Table 7. Sensitivity analysis to the number of runs on the ablation setting ($\lambda=1.0$, Step = Combined, Module = Query) 
+
+| \(N\) | Ans. TV | Find. TV | Cit. TV | Acc. |
+|---|---:|---:|---:|---:|
+| 4  | 0.56 [0.40, 0.68] | 0.94 [0.77, 0.97] | 0.51 [0.54, 0.62] | 0.44 [0.40, 0.56] |
+| 7  | 0.52 [0.48, 0.59] | 0.84 [0.82, 0.87] | 0.51 [0.46, 0.56] | 0.51 [0.43, 0.58] |
+| 10 | 0.51 [0.47, 0.56] | 0.85 [0.83, 0.87] | 0.49 [0.45, 0.55] | 0.52 [0.44, 0.59] |
+| 13 | 0.50 [0.46, 0.53] | 0.85 [0.83, 0.87] | 0.48 [0.45, 0.53] | 0.52 [0.45, 0.59] |
+| 16 | 0.50 [0.48, 0.53] | 0.86 [0.84, 0.87] | 0.48 [0.46, 0.50] | 0.53 [0.50, 0.57] |
+
+
+
+
