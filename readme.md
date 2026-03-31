@@ -1,4 +1,4 @@
-# Additional Results 
+# Supplementary material for rebuttal for Submission 18524 
 
 ## Table 1. Temperature Ablation results on 30 instances with 95\% bootstrap confidence intervals
 
